@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Banco UniparBank</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banco UniparBank</title>
 
-  <style>
-    body{
-      background:#eceff1;
-      font-family:Verdana, Geneva, Tahoma, sans-serif;
-    }
+    <style>
+        body {
+            background: #eceff1;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
 
-    .container{
-      width:420px;
-      margin:60px auto;
-      background:white;
-      padding:25px;
-      border:1px solid #ccc;
-    }
+        .container {
+            width: 420px;
+            margin: 60px auto;
+            background: white;
+            padding: 25px;
+            border: 1px solid #ccc;
+        }
 
-    h1{
-      font-size:24px;
-      margin-bottom:20px;
-      color:#222;
-    }
-  </style>
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+    </style>
 </head>
+
 <body>
+    <div class="container">
+        <h1>Banco UniparBank</h1>
 
-  <div class="container">
-    <h1>Banco UniparBank</h1>
+        <button onclick="calcularBanco()">
+            Executar Operações
+        </button>
 
-    <button onclick="calcularBanco()">
-      Executar Operações
-    </button>
+        <button onclick="limparCaixa()">
+            Limpar tela
+        </button>
 
-    <div id="resultado"></div>
-  </div>
-<script src="script.js"></script>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-

@@ -17,16 +17,12 @@ function calcularBanco(){
       // Meta de Saldo 
       let metadeSaldo = saldo / 2
 
-      // resto
-      let restoSaldo = saldo % 5
+      // resto da divisão
+      let saldo_par = saldo % 2 == 0
 
       // Juros compostos
       let jurosCompostos =
         saldo * (1 + taxa / 100) ** anos
-
-      // precedência
-      let exemploConta =
-        (saldo + deposito) * 2
 
       saldo += 50
 
@@ -38,14 +34,10 @@ function calcularBanco(){
 
       saldo **= 2
 
-      saldo %= 1000
-
       document.getElementById("resultado").innerHTML = `
 
-        <strong>Saldo final:</strong>
-        R$ ${saldo.toFixed(2)}
-
-        <div class="linha"></div>
+        <strong>Saldo:</strong>
+        R$ ${saldo.toFixed(2)} <br>
 
         <strong>Rendimento:</strong>
         R$ ${rendimento.toFixed(2)} <br>
@@ -53,14 +45,23 @@ function calcularBanco(){
         <strong>Metade do saldo:</strong>
         R$ ${metadeSaldo.toFixed(2)} <br>
 
-        <strong>Resto da divisão:</strong>
-        ${restoSaldo} <br>
+        <strong>Saldo é:</strong>
+        ${saldo_par ? 'número par' : 'número impar'} <br>
 
         <strong>Juros compostos:</strong>
         R$ ${jurosCompostos.toFixed(2)} <br>
 
-        <strong>Conta com precedência:</strong>
-        ${exemploConta.toFixed(2)}
-
       `
+      /*
+      if(teste){
+        //executa um bloco de codigo
+      }else{
+        // executa outro
+      }
+      */
+      //teste ? resultado se for verdade : resultado se for falso -> ternario no JS
+}
+
+function limparCaixa(){
+    document.getElementById("resultado").innerHTML = ``
 }
