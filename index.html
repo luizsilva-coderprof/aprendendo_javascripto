@@ -1,43 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Banco UniparBank</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        body{
+            background-color: Rgb(52, 168, 235);
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
 
-  <style>
-    body{
-      background:#eceff1;
-      font-family:Verdana, Geneva, Tahoma, sans-serif;
-    }
+        h1{
+            color: #FFD166;
+        }
 
-    .container{
-      width:420px;
-      margin:60px auto;
-      background:white;
-      padding:25px;
-      border:1px solid #ccc;
-    }
+        h2{
+            color: white;
+        }
+    </style>
 
-    h1{
-      font-size:24px;
-      margin-bottom:20px;
-      color:#222;
+    <script>
+    function questionario(){
+        alert('Vamos conhecer a base do Javascript!')
+        var decisao = confirm('Está pronto para aprender?')
+        const pais = 'Brasil'
+        var teste = null
+        let teste2
+
+        if(decisao){
+            let nome = prompt('Qual seu nome?:').toUpperCase()
+
+            let idade = Number.parseInt(
+                prompt('Qual sua idade?')
+            )
+
+            let curso = prompt('Qual seu curso?:')
+            let salario = prompt('Digite seu salário:')
+            let nota = Number(prompt('Digite a maior nota que tirou no curso até agora'))
+
+            document.writeln('<h2>Seja bem vindo, ' + nome + '!</h2>')
+            
+            document.write('<ul id="lista">')
+                document.writeln('<li>Você tem ' + idade + ' anos!</li>')
+                document.writeln(`<li>Curso escolhido: ${curso.toLowerCase()}</li>`)
+                document.writeln('<li>Você tem '+ nome.length + ' caracteres no seu nome!</li>')
+                document.writeln('<li> Seu país é ' + pais + '</l1>')
+                document.writeln('<li>Seu salário é de: '+Number.parseFloat(salario).toFixed(2)+'</li>')
+            document.write('</ul>')
+
+            console.log(typeof nome)
+            console.log(typeof decisao)
+            console.log(typeof idade)
+            console.log(typeof curso)
+            console.log(typeof teste)
+            console.log(typeof teste2)
+
+        }else{
+            alert('Que pena querido aluno, quem sabe na próxima!')
+            document.writeln('<h1>Sistema encerrado.. recarregue a página..</h1>')
+            alert(decisao)
+            alert(nome)
+        }
     }
-  </style>
+    </script>
 </head>
 <body>
-
-  <div class="container">
-    <h1>Banco UniparBank</h1>
-
-    <button onclick="calcularBanco()">
-      Executar Operações
-    </button>
-
-    <div id="resultado"></div>
-  </div>
-<script src="script.js"></script>
+   <h1>Sistema de questionário</h1>
+   <button onclick="questionario()">Iniciar sistema</button>
 </body>
 </html>
-
